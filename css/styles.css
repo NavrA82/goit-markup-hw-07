@@ -125,9 +125,6 @@ ul {
 }
 /********************** MAIN PAGE ************************/
 
-.mobile-menu-open-btn {
-  display: none;
-}
 /* ---------   0px-1199px  ---------- */
 @media screen and (max-width: 1199px) {
   .work-section,
@@ -141,121 +138,28 @@ ul {
   .header-address {
     display: none;
   }
-
-  /* .hero-modal-window-backdrop,
-  .hero-modal-window, */
   .header-menu {
     display: none;
   }
-
-
-
-    
-  
-    /* .menu .link {
-      padding: 10px;
-      color: inherit;
-      text-decoration: none;
-    }
-  
-    .menu .link:hover,
-    .menu .link:focus {
-      text-decoration: underline;
-    }
-  
-    .mobile-menu-open-btn {
-      min-height: 40px;
-      min-width: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-      margin: 0;
-      padding: 0;
-      background-color: transparent;
-      cursor: pointer;
-      border: none;
-      border-radius: 50%;
-      outline: none;
-    } */
-
-}
-/* and (max-width: 767px) */
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .mobile-menu-open-btn {
-    display: block;
-  }
-
-} 
-
-.container {
-  width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-/****************************** MAIN PAGE **************************/
-/* ++++++++++++++++++++++++++++ mobile ++++++++++++++++++++++++ */
-@media screen and (min-width: 320px) {
-.container {
-    width: 288px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-  }
-
-  /* ======================== HEADER ======================== */
-  /* mobile menu */
-
-  /* .container-menu-mobile{
-          position: fixed;
-            z-index: 999;
-            background-color: #FFFFFF;
-            border: 2px solid #404BBF;
-            width: 100%;
-            height: 100%;
-            max-height: 796px;
-            padding: 80px 40px 40px 40px;
-          
-            transform: translateX(100%);
-            transition: transform 250ms ease-in-out;
-    } */
-
+    /* ======================== HEADER ======================== */
+    /* ----------------------- mobile menu------------------- */
   .container-menu-mobile {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
     background-color: #FFFFFF;
-    border: 2px solid #404BBF;
     width: 100%;
-    max-width: 320px;
     height: 100%;
-    max-height: 621px;
+    max-height: 796px;
     padding: 80px 40px 40px 40px;
-
-    /* transform: translateX(100%);
-                transition: transform 250ms ease-in-out; */
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+    transform: translateX(-100%);
+    transition: transform 250ms ease-in-out;
   }
-
-
-
-  .mobile-menu-open-icon {}
-
-  /* .container-menu-mobile.is-open {
-  position: absolute;
-  transform: translateX(888);
-} */
-
-
-  .header-mobile {}
-
-  /* .header-logo-menu-mobil-btn {
-    position: relative;
-    width: 320px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-  } */
+  .container-menu-mobile.is-open {
+    transform: translateX(0);
+  }
   .header-mobile-btn {
     position: absolute;
     top: 48px;
@@ -270,40 +174,27 @@ ul {
     transition: background-color var(--transition-duration), border var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .header-mobile-btn:is(:hover, :focus) {
     background-color: var(--accent-color);
     border: 1px solid var(--accent-color);
   }
-
-
-
   .header-mobile-btn-icon {
     fill: #000000;
     transition: fill var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
-  .header-mobile-menu-nav {
-    display: flex;
-    list-style: none;
+  .header-mobile-btn:is(:hover, :focus) .header-mobile-btn-icon {
+    fill: #FFFFFF;
   }
-
   .header-mobile-list {
     display: flex;
     flex-direction: column;
-    margin-top: var(--secondary-settings-margin);
     gap: var(--basic-settings-gap);
-    margin-bottom: 284px;
+    margin-bottom: 220px;
   }
-
   .header-mobile-item {
     display: flex;
-
   }
-
-  .js-open-menu {}
-
   .header-mobile-link {
     font-style: normal;
     font-weight: 700;
@@ -315,39 +206,29 @@ ul {
     transition: color var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .header-mobile-link:is(:hover, :focus) {
     color: var(--accent-color);
   }
-
   .header-mobile-menu-address {
     margin-bottom: 48px;
   }
-
-  .header-mobile-address-list {}
-
   .header-mobile-tel-item {
     margin-bottom: 40px;
   }
-
   .header-mobile-tel-link {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 600;
-    font-size: 36px;
-    line-height: 1.11;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
     text-transform: capitalize;
     color: #434455;
     transition: color var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .header-mobile-tel-link:is(:hover, :focus) {
     color: var(--accent-color);
   }
-
-  .header-mobile-mail-item {}
-
   .header-mobile-mail-link {
     font-family: 'Roboto';
     font-style: normal;
@@ -359,21 +240,17 @@ ul {
     transition: color var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .header-mobile-mail-link:is(:hover, :focus) {
     color: var(--accent-color);
   }
-
   .header-mobile-menu-social-list {
     display: flex;
     justify-content: space-between;
   }
-
   .header-mobile-menu-social-item {
     height: 40px;
     width: 40px;
   }
-
   .header-mobile-menu-social-link {
     background-color: var(--third-background-color);
     border-radius: 50%;
@@ -385,20 +262,13 @@ ul {
     transition: background-color var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .header-mobile-menu-icon {
     width: 24px;
     height: 24px;
   }
-
   .header-mobile-menu-social-link:is(:hover, :focus) {
     background-color: var(--accent-color);
   }
-  .header-all-nav{
-    padding-top: 24px;
-    padding-bottom: 24px;
-}
-
   .mobile-menu-open-btn {
     display: flex;
     border: none;
@@ -409,12 +279,41 @@ ul {
     line-height: 0;
     cursor: pointer;
   }
+}
 
+/* ###################### 480px-767px ########################### */
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  /* ======================== HEADER ======================== *
+  /* ----------------------- mobile menu------------------- */
+  .header-mobile-list {
+    margin-bottom: 284px;
+  }
+}
+.container {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+/* ###################### 0px-479px ########################### */
+/* ++++++++++++++++++++++++++++ mobile ++++++++++++++++++++++++ */
+/****************************** MAIN PAGE **************************/
+@media screen and (min-width: 320px) {
+.container {
+    width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+  /* ======================== HEADER ======================== */
+  /* ----------------------- mobile menu------------------- */
+  .header-all-nav {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
   /* ----------------------- logo ---------------------------*/
   .header-logo {
     margin-right: 108px;
   }
-
   .header-logo,
   .header-logo span {
     text-decoration: none;
@@ -425,16 +324,13 @@ ul {
     text-transform: uppercase;
     color: inherit;
   }
-
   .header-logo span {
     color: var(--fourth-text-color);
   }
-
   .header-section {
     background: var(--fourth-background-color);
     border-bottom: 1px solid var(--sixth-text-color);
   }
-
   /* ============================= HERO SECTION =================================== */
   .hero-section {
     position: relative;
@@ -446,17 +342,14 @@ ul {
     background-repeat: no-repeat;
     background-color: var(--first-background-color);
   }
-
   .hero-container {
     padding-top: 112px;
     padding-bottom: 112px;
   }
-
   .hero-title-container-mobile {
     max-width: 288px;
     margin: auto;
   }
-
   .hero-title-mobile {
     font-size: 28px;
     line-height: 1.11;
@@ -465,7 +358,6 @@ ul {
     color: var(--second-text-color);
     text-transform: capitalize;
   }
-
   .hero-button {
     display: block;
     width: 178px;
@@ -477,7 +369,6 @@ ul {
     border-radius: var(--basic-border-radius);
     border: 1px solid var(--third-background-color);
   }
-
   /* -------------------- modal window and backdrop ----------------- */
   .hero-modal-window-backdrop {
     position: fixed;
@@ -489,7 +380,6 @@ ul {
     background-color: rgba(46, 47, 66, 0.7);
     transition: opacity var(--transition-duration), visibility var(--transition-duration);
   }
-  /* ПЕРЕРОБИТИ МОДАЛЬНЕ ВІКНО*/
   .hero-modal-window {
     position: absolute;
     z-index: 11;
@@ -504,7 +394,6 @@ ul {
     padding: 72px 24px 24px 24px;
     margin: 0;
   }
-
   .hero-modal-title {
     font-weight: 500;
     font-size: 12px;
@@ -514,18 +403,15 @@ ul {
     color: var(--third-text-color);
     margin: 0;
   }
-
   .hero-modal-form {
     display: flex;
     flex-direction: column;
   }
-
   .hero-modal-form-label {
     display: flex;
     flex-direction: column;
     margin-top: var(--secondary-settings-margin);
   }
-
   .hero-modal-form-label-name {
     font-weight: 400;
     font-size: 12px;
@@ -533,7 +419,6 @@ ul {
     letter-spacing: 0.04em;
     color: #8E8F99;
   }
-
   .hero-modal-form-label-input {
     outline: none;
     border: none;
@@ -541,7 +426,6 @@ ul {
     padding: 8px 16px 8px 38px;
     width: 100%;
   }
-
   .hero-modal-form-input-icon {
     margin-top: 4px;
     position: relative;
@@ -550,7 +434,6 @@ ul {
     transition: border var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .hero-modal-form-icon {
     position: absolute;
     display: flex;
@@ -562,12 +445,10 @@ ul {
     transition: fill var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .hero-modal-form-input-icon:is(:hover) {
     border-color: var(--accent-color);
     fill: var(--accent-color);
   }
-
   .hero-modal-form-label-comment {
     outline: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -579,11 +460,9 @@ ul {
     transition: border var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .hero-modal-form-label-comment:hover {
     border-color: var(--accent-color);
   }
-
   .hero-modal-form-label-comment::placeholder {
     font-family: inherit;
     font-weight: 400;
@@ -592,7 +471,6 @@ ul {
     letter-spacing: 0.04em;
     color: rgba(117, 117, 117, 0.5);
   }
-
   /* ----------------------- checkbox and checkbox fake ------------- */
   .hero-modal-form-checkbox-accept {
     display: flex;
@@ -604,7 +482,6 @@ ul {
     color: #757575;
     margin-top: 16px;
   }
-
   .hero-modal-form-checkbox-fake {
     display: inline-block;
     width: 16px;
@@ -614,14 +491,12 @@ ul {
     cursor: pointer;
     margin-right: 8px;
   }
-
   .hero-modal-form-checkbox-icon {
     display: inline-block;
     position: absolute;
     opacity: 0;
     cursor: pointer;
   }
-
   .hero-modal-form-checkbox:checked~.hero-modal-form-checkbox-icon {
     opacity: 1;
   }
@@ -630,12 +505,11 @@ ul {
     border: -2px solid var(--accent-color);
   }
   .text-checkbox{
-        font-weight: 400;
-          font-size: 8px;
-          align-items: center;
-          line-height: 1.33;
-          letter-spacing: 0.04em;
-        
+    font-weight: 400;
+    font-size: 8px;
+    align-items: center;
+    line-height: 1.33;
+    letter-spacing: 0.04em
   }
   .hero-modal-form-checkbox-accept-link {
     font-weight: 400;
@@ -648,11 +522,9 @@ ul {
     transition: color var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .hero-modal-form-checkbox-accept-link:hover {
     color: var(--accent-color);
   }
-
   /* ---------------------- modal window button --------------------------- */
   .hero-modal-btn-submit {
     display: block;
@@ -665,7 +537,6 @@ ul {
     border-radius: var(--basic-border-radius);
     border: 1px solid var(--third-background-color);
   }
-
   .hero-modal-btn {
     position: absolute;
     top: 24px;
@@ -683,37 +554,30 @@ ul {
     transition: background-color var(--transition-duration), border var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .hero-modal-btn-icon {
     fill: #000000;
     transition: fill var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .hero-modal-btn:is(:hover, :focus) .hero-modal-btn-icon {
     fill: #FFFFFF;
   }
-
   .hero-modal-btn:is(:hover, :focus) {
     background-color: var(--accent-color);
     border: 1px solid var(--accent-color);
   }
-
   /* ------------------------------ backdrop off ------------------------------- */
   .hero-modal-window-backdrop.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
   }
-
   .hero-modal-window-backdrop {
     overflow-y: scroll;
   }
-
   body.modal-open {
     overflow: hidden;
   }
-
   /* ========================= BASIC PRINCIPLES SECTION ===================== */
   .principles-list {
     display: flex;
@@ -722,30 +586,24 @@ ul {
     row-gap: 48px;
     justify-content: center;
   }
-
   .principles-item {
     width: 256px;
   }
-
   .principles-title {
     margin-top: var(--secondary-settings-margin);
   }
-
   .principles-description {
     margin-top: var(--secondary-settings-margin);
   }
-
   .principles-container {
     padding-top: 72px;
     padding-bottom: 72px;
   }
-
   /* ====================== WHAT ARE WE DOING SECTION ==================== */
   /* =========================== OUR TEAM SECTION ======================= */
   .team-section {
     background: var(--second-background-color);
   }
-
   .team-container {
     display: flex;
     flex-direction: column;
@@ -753,7 +611,6 @@ ul {
     padding-top: 72px;
     padding-bottom: 72px;
   }
-
   .team-card-list {
     display: flex;
     flex-wrap: wrap;
@@ -762,36 +619,30 @@ ul {
     margin-top: var(--basic-settings-margin);
     justify-content: center;
   }
-
   .team-card-item {
     background: var(--fourth-background-color);
     max-width: calc((100 - 72px)) / 4;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px var(--basic-border-radius) var(--basic-border-radius);
   }
-
   .team-card-description {
     margin-top: var(--secondary-settings-margin);
   }
-
   .team-card-content {
     padding: 32px 16px;
     text-align: center;
     background-color: var(--second-text-color);
     border-radius: 0px 0px var(--basic-border-radius) var(--basic-border-radius);
   }
-
   .team-card-social-list {
     display: flex;
     margin-top: var(--secondary-settings-margin);
     gap: var(--basic-settings-gap);
   }
-
   .team-card-social-item {
     height: 40px;
     width: 40px;
   }
-
   .team-card-social-link {
     background-color: var(--third-background-color);
     border-radius: 50%;
@@ -803,16 +654,13 @@ ul {
     transition: background-color var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .team-card-icon {
     width: 16px;
     height: 16px;
   }
-
   .team-card-social-link:is(:hover, :focus) {
     background-color: var(--accent-color);
   }
-
   /* ============================= CUSTOMERS ========================== */
   .customer-container {
     display: flex;
@@ -821,11 +669,9 @@ ul {
     padding-top: 72px;
     padding-bottom: 72px;
   }
-
   .customer-title {
     text-align: center;
   }
-
   .customer-list {
     display: flex;
     margin-top: var(--basic-settings-margin);
@@ -834,11 +680,9 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .customer-item {
     display: flex;
   }
-
   .customer-link {
     width: 168px;
     height: 88px;
@@ -851,12 +695,10 @@ ul {
     transition: fill var(--transition-duration), border var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .customer-link:is(:hover, :focus) {
     fill: var(--accent-color);
     border: 1px solid var(--accent-color);
   }
-
   /* *********************** PORTFOLIO PAGE ************************ */
   /* ================== EXAMPLES OF PROJECTS SECTION =============== */
   /* --------------------- Portfolio filter buttons ---------------- */
@@ -869,7 +711,6 @@ ul {
     padding-bottom: 48px;
     min-width: 288px;
   }
-
   .portfolio-button {
     display: flex;
     background-color: var(--second-background-color);
@@ -880,7 +721,6 @@ ul {
     transition: background-color var(--transition-duration), box-shadow var(--transition-duration), border var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .portfolio-button-list {
     display: flex;
     flex-wrap: wrap;
@@ -892,18 +732,15 @@ ul {
     margin-left: auto;
     margin-right: auto;
   }
-
   .portfolio-button:is(:hover, :focus) {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
       0px 2px 1px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
-
   /* --------------------  Row examples of projects ------------------------ */
   .portfolio-card-subtitle {
     color: var(--third-text-color);
   }
-
   .portfolio-card-list {
     display: flex;
     flex-wrap: wrap;
@@ -914,16 +751,13 @@ ul {
     margin-left: auto;
     margin-right: auto;
   }
-
   .portfolio-card-item {
     transition: box-shadow var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .portfolio-card-item:hover {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
   }
-
   .portfolio-card-content {
     padding: 32px 16px;
     background: var(--second-text-color);
@@ -931,16 +765,13 @@ ul {
     border-right: 1px solid var(--border-color-img-portfolio);
     border-left: 1px solid var(--border-color-img-portfolio);
   }
-
   .portfolio-card-description {
     margin-top: 8px;
   }
-
   .portfolio-card-thumb {
     position: relative;
     overflow: hidden;
   }
-
   .portfolio-card-overlay {
     position: absolute;
     background-color: var(--third-background-color);
@@ -958,22 +789,18 @@ ul {
     transition: transform var(--transition-duration);
     transition-timing-function: var(--transition-timing-function);
   }
-
   .portfolio-link:is(:hover, :focus) .portfolio-card-overlay {
     transform: translate(0, 0)
   }
-
   .portfolio-card-img {
     width: 288px;
     height: 204px;
   }
-
   /* ========================== FOOTER =============================*/
   .footer-section {
     display: flex;
     background-color: var(--first-background-color);
   }
-
   .footer-container {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -983,7 +810,6 @@ ul {
     align-items: center;
     margin: auto;
   }
-
   .footer-container-logo {
     max-width: 264px;
     display: flex;
@@ -991,7 +817,6 @@ ul {
     justify-content: center;
     margin: auto;
   }
-
   .footer-logo,
   .footer-logo span {
     text-decoration: none;
@@ -1006,18 +831,15 @@ ul {
     width: 115px;
     height: 22px;
   }
-
   .footer-logo span {
     color: var(--fourth-text-color);
   }
-
   .footer-description {
     margin-top: 16px;
     flex-direction: column;
     flex-direction: row-reverse;
     color: var(--sixth-text-color);
   }
-
   /* ---------------------- social icons ----------------------- */
   .footer-social {
     min-width: 80px;
@@ -1026,7 +848,6 @@ ul {
     align-items: center;
     margin-top: 48px;
   }
-
   .footer-subtitle,
   .footer-social-titel {
     font-weight: 500;
@@ -1035,18 +856,15 @@ ul {
     letter-spacing: 0.02em;
     color: var(--second-text-color);
   }
-
   .footer-social-list {
     display: flex;
     margin-top: 16px;
     gap: 16px;
   }
-
   .footer-social-item {
     height: 40px;
     width: 40px;
   }
-
   .footer-social-link {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
@@ -1072,7 +890,6 @@ ul {
     align-items: center;
     margin-top: 48px;
   }
-
   .footer-label-input {
     outline: none;
     margin-top: 16px;
@@ -1085,7 +902,6 @@ ul {
     height: 40px;
     color: var(--second-text-color);
   }
-
   .footer-label-input::placeholder {
     font-weight: 400;
     font-size: 12px;
@@ -1093,7 +909,6 @@ ul {
     letter-spacing: 0.04em;
     color: var(--second-text-color);
   }
-
   .footer-subscribe-btn {
     padding: 8px 24px;
     min-width: 165px;
@@ -1104,20 +919,16 @@ ul {
     color: var(--second-text-color);
     margin-top: 16px;
   }
-
   .footer-subscribe-icon {
     fill: var(--fourth-background-color);
   }
-
   .footer-btn-text {
     margin-right: 16px;
   }
-
   .footer-label {
     display: flex;
     flex-direction: column;
   }
-
   .footer-wrapper-btn {
     display: flex;
     flex-direction: column;
@@ -1126,16 +937,7 @@ ul {
 }
 
 
-
-
-
-
-
-
-/* +++++++++++++++++++++++++++ 480 +++++++++++++++++++++++++++++= */
-
-
-
+/* ##################### 480px-767px ########################### */
 @media screen and (min-width: 480px) {
   .container {
     width: 448px;
@@ -1143,46 +945,19 @@ ul {
     margin-right: auto;
     display: flex;
     }
-  /* ======================== HEADER ======================== */
-  /* mobile menu */
-  
-    /* .container-menu-mobile{
-          position: fixed;
-            z-index: 999;
-            background-color: #FFFFFF;
-            border: 2px solid #404BBF;
-            width: 100%;
-            height: 100%;
-            max-height: 796px;
-            padding: 80px 40px 40px 40px;
-          
-            transform: translateX(100%);
-            transition: transform 250ms ease-in-out;
-    } */
-  
-
-/* .container-menu-mobile.is-open {
-  position: absolute;
-  transform: translateX(888);
-} */
-
-
-    .header-mobile {}
-  
-    .header-mobile-menu-nav {
-      display: flex;
-        list-style: none;
-    }
-        .js-open-menu {}
-
+  /* ======================== HEADER ======================== *
+  /* ----------------------- mobile menu------------------- */
   /* ----------------------- logo ---------------------------*/
-  
   .header-logo {
     margin-right:268px;
   }
-
-    /* ============================= HERO SECTION =================================== */
-    .hero-section {
+  .header-mobile-tel-link {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.11;
+  }
+  /* ============================= HERO SECTION =================================== */
+  .hero-section {
     position: relative;
     max-width: 1440px;
     margin-left: auto;
@@ -1222,11 +997,8 @@ ul {
   .hero-modal-form-checkbox-accept-link{
     font-size: 12px;
   }
-
-    /* ---------------------- modal window button --------------------------- */
-
-    /* ------------------------------ backdrop off ------------------------------- */
-
+  /* ---------------------- modal window button --------------------------- */
+  /* ------------------------------ backdrop off ------------------------------- */
   /* ========================= BASIC PRINCIPLES SECTION ===================== */
   .principles-list {
     row-gap: 72px;
@@ -1295,43 +1067,36 @@ ul {
   }
 }
 
-
+/* ##################### 768px-1199px ########################### */
 /*  ++++++++++++++++++++++++ tablet ++++++++++++++++++++++++++  */
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
   }
-          .container-menu-mobile {
-            display: none;
-          }
-          
-      /* .container-menu.-mobile.is-open {
-        transform: translateX(0);
-      } */
-  /* =========================== HEADER ======================== */
-  /* ------------------- Menu navigation ---------------------- */
-    .header-menu-mobile {
+  .container-menu-mobile {
     display: none;
-    }
-
-    .mobile-menu-open-btn {
-          display: none;
-        }
+  }
+  /* =========================== HEADER ======================== */
+  /* ----------------------- mobile menu------------------- */
+  /* ------------------- Menu navigation ---------------------- */
+  .header-menu-mobile {
+    display: none;
+  }
+  .mobile-menu-open-btn {
+    display: none;
+  }
   .header-logo {
     margin-right: 76px;
-
   }
   .header-all-nav{
-    display: flex;
     padding-top: 0;
     padding-bottom: 0;
-}
-.header-logo {
-  display: flex;
-  align-items: center;
-  margin-right: 76px;
-
-}
+  }
+  .header-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 76px;
+  }
   .header-menu {
     display: flex;
   }
@@ -1403,7 +1168,6 @@ ul {
     color: var(--accent-color);
   }
   /* ============================= HERO SECTION ============================ */
-  
   .hero-title-container {
     max-width: 496px;
     margin-left: auto;
@@ -1419,9 +1183,9 @@ ul {
     text-transform: capitalize;
   }
   /* ========================= BASIC PRINCIPLES SECTION ===================== */
-        .principles-item {
-          width: 356px;
-        }
+  .principles-item {
+    width: 356px;
+  }
   /* ====================== WHAT ARE WE DOING SECTION ==================== */
   /* =========================== OUR TEAM SECTION ======================= */
   .team-card-list {
@@ -1467,7 +1231,6 @@ ul {
   .footer-social {
     align-items: flex-start;
     margin-top: 0;
-    /* margin-right: 80px; */
   }
   /* -------------------------- form subscribe ------------------------ */
   .footer-subscribe {
@@ -1488,9 +1251,9 @@ ul {
     flex-wrap: wrap;
   }
 }
-
-/* ++++++++++++++++++++++++++++++++ laptop ++++++++++++++++++++++++++++++++++++ */
-/****************************** MAIN PAGE **************************/
+/* ##################### < 1200px ########################### */
+/* +++++++++++++++++++++++++ laptop +++++++++++++++++++++++++++++ */
+/**************************** MAIN PAGE **************************/
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1158px;
@@ -1499,7 +1262,6 @@ ul {
     padding-right: 15px;
   }
   /* =========================== HEADER ======================== */
-
   .header-address {
     padding-top: 0;
   }
@@ -1575,7 +1337,6 @@ ul {
     width: 360px;
     height: 300px;
   }
-  
     /* ========================== FOOTER =============================*/
   .footer-container {
     padding-bottom: 104px;
@@ -1593,8 +1354,4 @@ ul {
     margin-left: 0;
     margin-top: 0;
   }
-
-
 }
-
-
