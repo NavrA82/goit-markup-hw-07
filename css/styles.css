@@ -123,25 +123,32 @@ ul {
   max-width: 100%;
   height: auto;
 }
-/********************** MAIN PAGE ************************/
+.container {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
-/* ---------   0px-1199px  ---------- */
+/* ###################### 0px-1199px  ###################### */
 @media screen and (max-width: 1199px) {
+  /***************** MAIN PAGE ***************/
+  /* ====== WHAT ARE WE DOING SECTION ====== */
   .work-section,
+  /* =====BASIC PRINCIPLES SECTION=========== */
   .principles-icon {
     display: none;
   }
 }
-/* ---------   0px-767px  ---------- */
+/* ######################  0px-767px  ###################### */
 @media screen and (max-width: 767px) {
-
+  /********************** MAIN PAGE ************************/
+  /* ======================== HEADER ======================== */
   .header-address {
     display: none;
   }
   .header-menu {
     display: none;
   }
-    /* ======================== HEADER ======================== */
     /* ----------------------- mobile menu------------------- */
   .container-menu-mobile {
     position: fixed;
@@ -192,7 +199,6 @@ ul {
     display: flex;
     flex-direction: column;
     gap: var(--basic-settings-gap);
-    /* margin-bottom: 220px; */
   }
   .header-mobile-item {
     display: flex;
@@ -286,19 +292,15 @@ ul {
 
 /* ###################### 480px-767px ########################### */
 @media screen and (min-width: 480px) and (max-width: 767px) {
-  /* ======================== HEADER ======================== *
+  /* ======================== HEADER ======================== */
   /* ----------------------- mobile menu------------------- */
 
 }
-.container {
-  width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-/* ###################### 0px-479px ########################### */
-/* ++++++++++++++++++++++++++++ mobile ++++++++++++++++++++++++ */
-/****************************** MAIN PAGE **************************/
+
+/* ##################### 0px-479px ########################### */
+
 @media screen and (min-width: 320px) {
+  /************************ MAIN PAGE **************************/
 .container {
     width: 288px;
     margin-left: auto;
@@ -332,7 +334,7 @@ ul {
     background: var(--fourth-background-color);
     border-bottom: 1px solid var(--sixth-text-color);
   }
-  /* ============================= HERO SECTION =================================== */
+  /* ========================= HERO SECTION ============================== */
   .hero-section {
     position: relative;
     max-width: 1440px;
@@ -501,7 +503,6 @@ ul {
   .hero-modal-form-checkbox:checked~.hero-modal-form-checkbox-icon {
     opacity: 1;
   }
-
   .hero-modal-form-checkbox:hover~.hero-modal-form-checkbox-icon {
     border: -2px solid var(--accent-color);
   }
@@ -600,7 +601,6 @@ ul {
     padding-top: 72px;
     padding-bottom: 72px;
   }
-  /* ====================== WHAT ARE WE DOING SECTION ==================== */
   /* =========================== OUR TEAM SECTION ======================= */
   .team-section {
     background: var(--second-background-color);
@@ -936,10 +936,9 @@ ul {
     align-items: center;
   }
 }
-
-
 /* ##################### 480px-767px ########################### */
 @media screen and (min-width: 480px) {
+  /************************ MAIN PAGE **************************/
   .container {
     width: 448px;
     margin-left: auto;
@@ -948,16 +947,16 @@ ul {
     }
   /* ======================== HEADER ======================== *
   /* ----------------------- mobile menu------------------- */
-  /* ----------------------- logo ---------------------------*/
-  .header-logo {
-    margin-right:268px;
-  }
   .header-mobile-tel-link {
     font-weight: 600;
     font-size: 36px;
     line-height: 1.11;
   }
-  /* ============================= HERO SECTION =================================== */
+    /* ----------------------- logo ---------------------------*/
+    .header-logo {
+      margin-right: 268px;
+    }
+  /* ======================== HERO SECTION ============================= */
   .hero-section {
     position: relative;
     max-width: 1440px;
@@ -998,9 +997,7 @@ ul {
   .hero-modal-form-checkbox-accept-link{
     font-size: 12px;
   }
-  /* ---------------------- modal window button --------------------------- */
-  /* ------------------------------ backdrop off ------------------------------- */
-  /* ========================= BASIC PRINCIPLES SECTION ===================== */
+  /* ======================== BASIC PRINCIPLES SECTION ===================== */
   .principles-list {
     row-gap: 72px;
     justify-content: center;
@@ -1012,7 +1009,6 @@ ul {
     padding-top: 96px;
     padding-bottom: 96px;
   }
-  /* ====================== WHAT ARE WE DOING SECTION ==================== */
   /* =========================== OUR TEAM SECTION ======================= */
   .team-container {
     padding-top: 96px;
@@ -1041,12 +1037,12 @@ ul {
     width: 320px; 
     margin-bottom: var(--basic-settings-margin);
   }
-  /* --------------------  Row examples of projects ------------------------ */
+  /* ------------------  Row examples of projects ------------------- */
   .portfolio-card-img{
     width: 396px;
     height: 280px;
   }
-    /* ========================== FOOTER =============================*/
+  /* =========================== FOOTER =============================*/
   .footer-section {
     display: flex;
     background-color: var(--first-background-color);
@@ -1055,11 +1051,11 @@ ul {
     padding-top: 96px;
     padding-bottom: 96px;
   }
-  /* ---------------------- social icons ----------------------- */
+  /* -------------------------- social icons ----------------------- */
   .footer-social {
     margin-top: 72px;
   }
-  /* -------------------------- form subscribe ------------------------ */
+  /* ----------------------- form subscribe ------------------------ */
   .footer-subscribe {
     margin-top: 72px;
   }
@@ -1069,17 +1065,15 @@ ul {
 }
 
 /* ##################### 768px-1199px ########################### */
-/*  ++++++++++++++++++++++++ tablet ++++++++++++++++++++++++++  */
 @media screen and (min-width: 768px) {
+  /* =========================== HEADER ======================== */
   .container {
     width: 768px;
   }
+  /* ----------------------- mobile menu------------------- */
   .container-menu-mobile {
     display: none;
   }
-  /* =========================== HEADER ======================== */
-  /* ----------------------- mobile menu------------------- */
-  /* ------------------- Menu navigation ---------------------- */
   .header-menu-mobile {
     display: none;
   }
@@ -1089,6 +1083,7 @@ ul {
   .header-logo {
     margin-right: 76px;
   }
+  /* ------------------- Menu navigation ---------------------- */
   .header-all-nav{
     padding-top: 0;
     padding-bottom: 0;
@@ -1187,7 +1182,6 @@ ul {
   .principles-item {
     width: 356px;
   }
-  /* ====================== WHAT ARE WE DOING SECTION ==================== */
   /* =========================== OUR TEAM SECTION ======================= */
   .team-card-list {
     row-gap: 64px;
@@ -1253,9 +1247,8 @@ ul {
   }
 }
 /* ##################### < 1200px ########################### */
-/* +++++++++++++++++++++++++ laptop +++++++++++++++++++++++++++++ */
-/**************************** MAIN PAGE **************************/
 @media screen and (min-width: 1200px) {
+  /**************************** MAIN PAGE **************************/
   .container {
     max-width: 1158px;
     width: 100%;
@@ -1274,12 +1267,12 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
   }
-  /* ============================= HERO SECTION ============================ */
+  /* ======================= HERO SECTION ========================== */
   .hero-container {
     padding-top: 188px;
     padding-bottom: 188px;
   }
-  /* ========================= BASIC PRINCIPLES SECTION ===================== */
+  /* ================= BASIC PRINCIPLES SECTION ===================== */
   .principles-item-icon {
     display: flex;
     padding: 24px 100px;
