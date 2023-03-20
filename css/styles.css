@@ -190,7 +190,7 @@ img {
     transition: transform 250ms ease-in-out;
     overflow-y: scroll;
   }
-    .menu-mobile-backdrop.is-open .container-menu-mobile {
+  .menu-mobile-backdrop.is-open .container-menu-mobile {
     transform: translateX(0);
   }
   .header-mobile-btn {
@@ -223,6 +223,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: var(--basic-settings-gap);
+    margin-bottom: 40px;
   }
   .header-mobile-item {
     display: flex;
@@ -1055,13 +1056,13 @@ body.modal-open {
     margin-bottom: var(--basic-settings-margin);
     margin-left: 0;
   }
-    .portfolio-button-list {
-      width: 320px;
+  .portfolio-button-list {
+    width: 320px;
   }
   /* ------------------  Row examples of projects ------------------- */
-    .portfolio-card-subtitle {
-      font-size: 20px;
-    }
+  .portfolio-card-subtitle {
+    font-size: 20px;
+  }
   .portfolio-card-img{
     width: 396px;
     height: 280px;
