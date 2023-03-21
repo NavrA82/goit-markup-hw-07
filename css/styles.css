@@ -20,6 +20,7 @@
   --secondary-found: 'Raleway', sans-serif;
   /* -----settings padding, margin and gap*/
   --basic-settings-padding-section: 120px;
+  --secondary-settings-padding-section: 96px;
   --basic-settings-gap: 24px;
   --basic-settings-margin: 72px;
   --secondary-settings-margin: 8px;
@@ -130,7 +131,11 @@ img {
   height: auto;
 }
 .container {
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+}
+.section {
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -318,15 +323,12 @@ img {
 /* !##################### 0px-479px ########################### */
 /************************ MAIN PAGE **************************/
 .container {
-  max-width: 428px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 396px;
   display: flex;
 }
 /* ?======================== HEADER ======================== */
 /* ----------------------- mobile menu------------------- */
-.header-all-nav {
-
+.header-section {
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -354,7 +356,6 @@ img {
 /* ?========================= HERO SECTION ============================== */
 .hero-section {
   position: relative;
-  /* max-width: 288px; */
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/mobile-hero-people-office.jpg');
@@ -362,6 +363,8 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-color: var(--first-background-color);
+  padding-top: 112px;
+  padding-bottom: 112px;
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 479px),
   screen and (min-resolution: 192dpi) and (max-width: 479px),
@@ -369,10 +372,6 @@ img {
   .hero-section {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/mobile-hero-people-office@2x.jpg');
   }
-}
-.hero-container {
-  padding-top: 112px;
-  padding-bottom: 112px;
 }
 .hero-title-container-mobile {
   max-width: 288px;
@@ -391,7 +390,7 @@ img {
   width: 178px;
   padding: 16px 32px;
   margin: auto;
-  margin-top: 72px;
+  margin-top: var(--basic-settings-margin);
   background-color: var(--third-background-color);
   color: var(--second-text-color);
   border-radius: var(--basic-border-radius);
@@ -622,7 +621,7 @@ body.modal-open {
 .principles-description {
   margin-top: var(--secondary-settings-margin);
 }
-.principles-container {
+.principles-section {
   padding-top: 72px;
   padding-bottom: 72px;
 }
@@ -637,13 +636,12 @@ body.modal-open {
 /* ?=========================== OUR TEAM SECTION ======================= */
 .team-section {
   background: var(--second-background-color);
+  padding-top: var(--secondary-settings-padding-section);
+  padding-bottom: 128px;
 }
 .team-container {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  padding-top: 72px;
-  padding-bottom: 72px;
 }
 .team-card-list {
   display: flex;
@@ -696,12 +694,13 @@ body.modal-open {
   background-color: var(--accent-color);
 }
 /* ?============================= CUSTOMERS ========================== */
+  .customer-section {
+  padding-top: var(--secondary-settings-padding-section);
+  padding-bottom: var(--secondary-settings-padding-section);
+  }
 .customer-container {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  padding-top: 72px;
-  padding-bottom: 72px;
 }
 .customer-title {
   text-align: center;
@@ -710,15 +709,13 @@ body.modal-open {
   display: flex;
   margin-top: var(--basic-settings-margin);
   column-gap: 16px;
-  row-gap: 24px;
+  row-gap: 72px;
   flex-wrap: wrap;
   justify-content: center;
 }
-.customer-item {
-  display: flex;
-}
+
 .customer-link {
-  width: 168px;
+  width: 190px;
   height: 88px;
   display: flex;
   outline: none;
@@ -736,13 +733,13 @@ body.modal-open {
 /* *********************** PORTFOLIO PAGE ************************ */
 /* ?================== EXAMPLES OF PROJECTS SECTION =============== */
 /* --------------------- Portfolio filter buttons ---------------- */
+.portfolio-section {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
 .portfolio-container {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 48px;
-  padding-bottom: 48px;
 }
 .portfolio-button {
   display: flex;
@@ -779,7 +776,7 @@ body.modal-open {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 24px;
+  row-gap: var(--basic-settings-gap);
   column-gap: var(--basic-settings-gap);
   width: 100%;
   margin-left: auto;
@@ -832,24 +829,21 @@ body.modal-open {
 }
 /* ?========================== FOOTER =============================*/
 .footer-section {
-  display: flex;
+  padding-top: var(--secondary-settings-padding-section);
+  padding-bottom: var(--secondary-settings-padding-section);
   background-color: var(--first-background-color);
 }
 .footer-container {
-  padding-top: 64px;
-  padding-bottom: 64px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin: auto;
 }
 .footer-container-logo {
   max-width: 264px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: auto;
 }
 .footer-logo,
 .footer-logo span {
@@ -880,7 +874,7 @@ body.modal-open {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 48px;
+  margin-top: var(--basic-settings-margin);
 }
 .footer-subtitle,
 .footer-social-titel {
@@ -922,7 +916,7 @@ body.modal-open {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 48px;
+  margin-top: var(--basic-settings-margin);
 }
 .footer-label-input {
   outline: none;
@@ -932,7 +926,7 @@ body.modal-open {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: inherit;
-  min-width: 256px;
+  width: 288px;
   height: 40px;
   color: var(--second-text-color);
 }
@@ -968,13 +962,15 @@ body.modal-open {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 376px) {
+    .footer-label-input {
+    width: 344px;
+  }
+}
 
 /*!##################### 480px-767px ########################### */
 @media screen and (min-width: 480px) {
   /************************ MAIN PAGE **************************/
-  .container {
-    width: 448px;
-    }
   /* ?======================== HEADER ======================== *
   /* ----------------------- mobile menu------------------- */
   .header-mobile-tel-link {
@@ -993,10 +989,6 @@ body.modal-open {
     .hero-section {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/tablet-hero-people-office@2x.jpg');
     }
-  }
-  .hero-container {
-    padding-top: 112px;
-    padding-bottom: 108px;
   }
   .hero-title-container-mobile{
     max-width: 320px;
@@ -1029,25 +1021,17 @@ body.modal-open {
     row-gap: 72px;
     justify-content: center;
   }
-  .principles-container{
-    padding-top: 96px;
-    padding-bottom: 96px;
+  .principles-section{
+    padding-top: var(--secondary-settings-padding-section);
+    padding-bottom: 104px;
   }
   /* ?=========================== OUR TEAM SECTION ======================= */
-  .team-container {
-    padding-top: 96px;
-    padding-bottom: 96px;
+  .team-section {
+    padding-top: var(--secondary-settings-padding-section);
+    padding-bottom: var(--secondary-settings-padding-section);
   }
   .team-card-list {
-    row-gap: 72px;
-  }
-  /* ?============================= CUSTOMERS ========================== */
-  .customer-container {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
-  .customer-list {
-    row-gap: 72px;
+    column-gap: var(--basic-settings-gap);
   }
   /* *********************** PORTFOLIO PAGE ************************ */
   /* ?================== EXAMPLES OF PROJECTS SECTION =============== */
@@ -1072,20 +1056,9 @@ body.modal-open {
     display: flex;
     background-color: var(--first-background-color);
   }
-  .footer-container {
-    padding-top: 96px;
-    padding-bottom: 96px;
-  }
-  /* -------------------------- social icons ----------------------- */
-  .footer-social {
-    margin-top: 72px;
-  }
   /* ----------------------- form subscribe ------------------------ */
-  .footer-subscribe {
-    margin-top: 72px;
-  }
   .footer-label-input {
-    min-width: 398px;
+    width: 398px;
   }
 }
 
@@ -1095,7 +1068,6 @@ body.modal-open {
   .container {
     max-width: 768px;
     width: 100%;
-
   }
   /* ----------------------- mobile menu------------------- */
   .mobile-menu-open-btn,
@@ -1105,7 +1077,7 @@ body.modal-open {
     display: none;
   }
   /* ------------------- Menu navigation ---------------------- */
-  .header-all-nav{
+  .header-section{
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -1187,8 +1159,9 @@ body.modal-open {
   .hero-section {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/desktop-hero-people-office.jpg');
     background-color: var(--first-background-color);
+    padding-top: 112px;
+    padding-bottom: 108px;
   }
-
   @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
   screen and (min-resolution: 192dpi) and (min-width: 1200px),
   screen and (min-resolution: 2dppx) and (min-width: 1200px) {
@@ -1197,7 +1170,7 @@ body.modal-open {
     }
   }
   .hero-button {
-    margin-top: 36px;
+    margin-top: 40px;
   }
   
   .hero-title-container {
@@ -1206,7 +1179,6 @@ body.modal-open {
     margin-right: auto;
   }
   .hero-title {
-    max-width: 496px;
     font-size: 56px;
     line-height: 1.07;
     text-align: center;
@@ -1237,16 +1209,21 @@ body.modal-open {
     row-gap: 64px;
   }
   /* ?============================= CUSTOMERS ========================== */
+  .customer-container {
+    max-width: 552px;
+  }
   .customer-list {
     column-gap: var(--basic-settings-gap);
-    row-gap: 72px;
+  }
+  .customer-link {
+    width: 168px;
   }
   /* *********************** PORTFOLIO PAGE ************************ */
   /* ?================== EXAMPLES OF PROJECTS SECTION =============== */
   /* --------------------- Portfolio filter buttons ---------------- */
-  .portfolio-container {
+  .portfolio-section {
     padding-top: 64px;
-    padding-bottom: 96px;
+    padding-bottom: var(--secondary-settings-padding-section);
   }
   .portfolio-button-list {
     margin-bottom: 64px;
@@ -1266,10 +1243,10 @@ body.modal-open {
   /* ?========================== FOOTER =============================*/
   .footer-container {
     justify-content: flex-start;
+    max-width: 552px;
   }
   .footer-container-logo {
     margin-right: 24px;
-    margin-left: 108px;
     justify-content: flex-start;
   }
   /* ---------------------- social icons ----------------------- */
@@ -1279,11 +1256,11 @@ body.modal-open {
   }
   /* -------------------------- form subscribe ------------------------ */
   .footer-subscribe {
+    justify-content: flex-start;
     align-items: flex-start;
-    margin-left: 108px;
   }
   .footer-label-input {
-    min-width: 264px;
+    width: 264px;
   }
   .footer-label{
     margin-right: 24px;
@@ -1300,9 +1277,11 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   /**************************** MAIN PAGE **************************/
   .container {
-    max-width: 1158px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 1128px;
+  }
+  .section{
+  padding-left: 15px;
+  padding-right: 15px;
   }
   /* ?=========================== HEADER ======================== */
   .header-address {
@@ -1319,13 +1298,11 @@ body.modal-open {
   /* ?======================= HERO SECTION ========================== */
   .hero-section {
     max-width: 1440px;
-  }
-  .hero-container {
     padding-top: 188px;
     padding-bottom: 188px;
   }
   .hero-button {
-    margin-top: 48 px;
+    margin-top: var(--basic-settings-margin);
   }
   /* ?================= BASIC PRINCIPLES SECTION ===================== */
   .principles-item-icon {
@@ -1335,7 +1312,7 @@ body.modal-open {
     background-color: var(--second-background-color);
     border-radius: var(--basic-border-radius);
   }
-  .principles-container {
+  .principles-section {
     padding-top: var(--basic-settings-padding-section);
     padding-bottom: var(--basic-settings-padding-section);
   }
@@ -1363,29 +1340,30 @@ body.modal-open {
     justify-content: center;
   }
   /* ?=========================== OUR TEAM SECTION ======================= */
-  .team-container {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+  .principles-list {
+    row-gap: 64px;
+  }
+  .team-section {
     padding-top: var(--basic-settings-padding-section);
     padding-bottom: var(--basic-settings-padding-section);
   }
   /* ?============================= CUSTOMERS ========================== */
-  .customer-container {
+  .customer-section {
     padding-top: var(--basic-settings-padding-section);
     padding-bottom: var(--basic-settings-padding-section);
   }
   /* *********************** PORTFOLIO PAGE ************************ */
   /* ?================== EXAMPLES OF PROJECTS SECTION =============== */
   /* --------------------- Portfolio filter buttons ---------------- */
-  .portfolio-container {
-    padding-top: 100px;
+  
+  .portfolio-section {
+    padding-top: var(--secondary-settings-padding-section);
     padding-bottom: var(--basic-settings-padding-section);
   }
   /* --------------------  Row examples of projects ------------------------ */
   .portfolio-card-list {
     row-gap: 48px;
-    margin-bottom: 72px;
+    margin-bottom: var(--basic-settings-margin);
     }
   .portfolio-card-img {
     width: 360px;
@@ -1397,7 +1375,6 @@ body.modal-open {
   }
   .footer-container-logo {
     margin-right: 120px;
-    margin-left: 0;
   }
   /* ---------------------- social icons ----------------------- */
   .footer-social {
