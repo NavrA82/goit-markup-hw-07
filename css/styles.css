@@ -135,8 +135,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-}
-.section {
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -715,7 +713,6 @@ body.modal-open {
   flex-wrap: wrap;
   justify-content: center;
 }
-
 .customer-link {
   width: 190px;
   height: 88px;
@@ -766,8 +763,8 @@ body.modal-open {
 }
 .portfolio-button:is(:hover, :focus) {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-    0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
+  0px 2px 1px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* --------------------  Row examples of projects ------------------------ */
 .portfolio-card-subtitle {
@@ -993,7 +990,6 @@ body.modal-open {
   }
   .hero-title-container-mobile{
     max-width: 320px;
-    margin: auto;
   }
   .hero-title-mobile {
     font-size: 36px;
@@ -1274,11 +1270,9 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   /**************************** MAIN PAGE **************************/
   .container {
-    max-width: 1128px;
-  }
-  .section{
-  padding-left: 15px;
-  padding-right: 15px;
+    max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   /* ?=========================== HEADER ======================== */
   .header-address {
