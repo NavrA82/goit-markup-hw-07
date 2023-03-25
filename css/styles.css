@@ -834,7 +834,7 @@ body.modal-open {
   flex-wrap: wrap;
   justify-content: center;
 }
-.footer-container-logo {
+.footer-logo {
   max-width: 264px;
   display: flex;
   flex-wrap: wrap;
