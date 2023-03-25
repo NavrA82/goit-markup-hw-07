@@ -395,214 +395,6 @@ img {
   border-radius: var(--basic-border-radius);
   border: 1px solid var(--third-background-color);
 }
-/* -------------------- modal window and backdrop ----------------- */
-.hero-modal-window-backdrop {
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(46, 47, 66, 0.7);
-  transition: opacity var(--transition-duration), visibility var(--transition-duration);
-}
-.hero-modal-window {
-  position: absolute;
-  z-index: 11;
-  left: 50%;
-  top: 12px;
-  transform: translate(-50%, 0);
-  min-width: 308px;
-  height: 584px;
-  background: #FCFCFC;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 72px 24px 24px 24px;
-  margin: 0;
-}
-.hero-modal-title {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: var(--third-text-color);
-  margin: 0;
-}
-.hero-modal-form {
-  display: flex;
-  flex-direction: column;
-}
-.hero-modal-form-label {
-  display: flex;
-  flex-direction: column;
-  margin-top: var(--secondary-settings-margin);
-}
-.hero-modal-form-label-name {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
-  color: #8E8F99;
-}
-.hero-modal-form-label-input {
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 16px 8px 38px;
-  width: 100%;
-}
-.hero-modal-form-input-icon {
-  margin-top: 4px;
-  position: relative;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  transition: border var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
-}
-.hero-modal-form-icon {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: 50%;
-  left: 16px;
-  transform: translate(0, -50%);
-  transition: fill var(--transition-duration), border var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
-}
-.hero-modal-form-input-icon:hover {
-  border-color: var(--accent-color);
-  fill: var(--accent-color);
-}
-.hero-modal-form-label-comment {
-  outline: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding: 8px 16px;
-  margin-top: 4px;
-  height: 120px;
-  resize: none;
-  transition: border var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
-}
-.hero-modal-form-label-comment:is(:hover, :focus) {
-  border-color: var(--accent-color);
-}
-.hero-modal-form-label-comment::placeholder {
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
-  color: rgba(117, 117, 117, 0.5);
-}
-/* ----------------------- checkbox and checkbox fake ------------- */
-.hero-modal-form-checkbox-accept {
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
-  color: #757575;
-  margin-top: 16px;
-}
-.hero-modal-form-checkbox-fake {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border: 1.25px solid #2E2F42;
-  border-radius: 2px;
-  cursor: pointer;
-  margin-right: 8px;
-}
-.hero-modal-form-checkbox-icon {
-  display: inline-block;
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-.hero-modal-form-checkbox:checked~.hero-modal-form-checkbox-icon {
-  opacity: 1;
-}
-.hero-modal-form-checkbox:hover~.hero-modal-form-checkbox-icon {
-  border: -2px solid var(--accent-color);
-}
-.text-checkbox{
-  font-weight: 400;
-  font-size: 8px;
-  align-items: center;
-  line-height: 1.33;
-  letter-spacing: 0.04em
-}
-.hero-modal-form-checkbox-accept-link {
-  font-weight: 400;
-  font-size: 8px;
-  align-items: center;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
-  text-decoration-line: underline;
-  color: var(--fourth-text-color);
-  transition: color var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
-}
-.hero-modal-form-checkbox-accept-link:hover {
-  color: var(--accent-color);
-}
-/* ---------------------- modal window button --------------------------- */
-.hero-modal-btn-submit {
-  display: block;
-  width: 178px;
-  padding: 16px 32px;
-  margin: auto;
-  margin-top: 24px;
-  background-color: var(--third-background-color);
-  color: var(--second-text-color);
-  border-radius: var(--basic-border-radius);
-  border: 1px solid var(--third-background-color);
-}
-.hero-modal-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  background-color: #E7E9FC;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50px;
-  padding: 0;
-  cursor: pointer;
-  transition: background-color var(--transition-duration), border var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
-}
-.hero-modal-btn-icon {
-  fill: #000000;
-  transition: fill var(--transition-duration);
-  transition-timing-function: var(--transition-timing-function);
-}
-.hero-modal-btn:is(:hover, :focus) .hero-modal-btn-icon {
-  fill: #FFFFFF;
-}
-.hero-modal-btn:is(:hover, :focus) {
-  background-color: var(--accent-color);
-  border: 1px solid var(--accent-color);
-}
-/* ------------------------------ backdrop off ------------------------------- */
-.hero-modal-window-backdrop.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-.hero-modal-window-backdrop {
-  overflow-y: scroll;
-}
-body.modal-open {
-  overflow: hidden;
-}
 /* ?========================= BASIC PRINCIPLES SECTION ===================== */
 .principles-list {
   display: flex;
@@ -965,6 +757,243 @@ body.modal-open {
   flex-direction: column;
   align-items: center;
 }
+/* -------------------- modal window and backdrop ----------------- */
+.hero-modal-window-backdrop {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.7);
+  transition: opacity var(--transition-duration), visibility var(--transition-duration);
+}
+
+.hero-modal-window {
+  position: absolute;
+  z-index: 11;
+  left: 50%;
+  top: 12px;
+  transform: translate(-50%, 0);
+  min-width: 308px;
+  height: 584px;
+  background: #FCFCFC;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 72px 24px 24px 24px;
+  margin: 0;
+}
+
+.hero-modal-title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--third-text-color);
+  margin: 0;
+}
+
+.hero-modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-modal-form-label {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--secondary-settings-margin);
+}
+
+.hero-modal-form-label-name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #8E8F99;
+}
+
+.hero-modal-form-label-input {
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px 8px 38px;
+  width: 100%;
+}
+
+.hero-modal-form-input-icon {
+  margin-top: 4px;
+  position: relative;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.hero-modal-form-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+  transition: fill var(--transition-duration), border var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.hero-modal-form-input-icon:hover {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.hero-modal-form-label-comment {
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-top: 4px;
+  height: 120px;
+  resize: none;
+  transition: border var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.hero-modal-form-label-comment:is(:hover, :focus) {
+  border-color: var(--accent-color);
+}
+
+.hero-modal-form-label-comment::placeholder {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+/* ----------------------- checkbox and checkbox fake ------------- */
+.hero-modal-form-checkbox-accept {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+  margin-top: 16px;
+}
+
+.hero-modal-form-checkbox-fake {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #2E2F42;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.hero-modal-form-checkbox-icon {
+  display: inline-block;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.hero-modal-form-checkbox:checked~.hero-modal-form-checkbox-icon {
+  opacity: 1;
+}
+
+.hero-modal-form-checkbox:hover~.hero-modal-form-checkbox-icon {
+  border: -2px solid var(--accent-color);
+}
+
+.text-checkbox {
+  font-weight: 400;
+  font-size: 8px;
+  align-items: center;
+  line-height: 1.33;
+  letter-spacing: 0.04em
+}
+
+.hero-modal-form-checkbox-accept-link {
+  font-weight: 400;
+  font-size: 8px;
+  align-items: center;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+  color: var(--fourth-text-color);
+  transition: color var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.hero-modal-form-checkbox-accept-link:hover {
+  color: var(--accent-color);
+}
+
+/* ---------------------- modal window button --------------------------- */
+.hero-modal-btn-submit {
+  display: block;
+  width: 178px;
+  padding: 16px 32px;
+  margin: auto;
+  margin-top: 24px;
+  background-color: var(--third-background-color);
+  color: var(--second-text-color);
+  border-radius: var(--basic-border-radius);
+  border: 1px solid var(--third-background-color);
+}
+
+.hero-modal-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: #E7E9FC;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color var(--transition-duration), border var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.hero-modal-btn-icon {
+  fill: #000000;
+  transition: fill var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.hero-modal-btn:is(:hover, :focus) .hero-modal-btn-icon {
+  fill: #FFFFFF;
+}
+
+.hero-modal-btn:is(:hover, :focus) {
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+}
+
+/* ------------------------------ backdrop off ------------------------------- */
+.hero-modal-window-backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-modal-window-backdrop {
+  overflow-y: scroll;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 @media screen and (min-width: 420px) {
     /************************ MAIN PAGE **************************/
     /* ?======================== HEADER ======================== *
@@ -996,22 +1025,6 @@ body.modal-open {
   }
   .hero-title-mobile {
     font-size: 36px;
-  }
-    /* -------------------- modal window and backdrop ----------------- */
-  .hero-modal-window {
-    min-width: 408px;
-    height: 584px;
-  }
-  .hero-modal-title{
-    font-size: 16px;
-    line-height: 1.5;
-  }
-    /* ----------------------- checkbox and checkbox fake ------------- */ 
-  .text-checkbox{
-    font-size: 12px;
-  }
-  .hero-modal-form-checkbox-accept-link{
-    font-size: 12px;
   }
   /* ?======================== BASIC PRINCIPLES SECTION ===================== */
   .principles-list {
@@ -1052,6 +1065,22 @@ body.modal-open {
   .footer-section {
     display: flex;
     background-color: var(--first-background-color);
+  }
+  /* -------------------- modal window and backdrop ----------------- */
+  .hero-modal-window {
+    min-width: 408px;
+    height: 584px;
+  }
+  .hero-modal-title {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  /* ----------------------- checkbox and checkbox fake ------------- */
+  .text-checkbox {
+    font-size: 12px;
+  }
+  .hero-modal-form-checkbox-accept-link {
+    font-size: 12px;
   }
 }
 
@@ -1179,12 +1208,6 @@ body.modal-open {
     color: var(--second-text-color);
     text-transform: capitalize;
   }
-  /* -------------------- modal window and backdrop ----------------- */
-  .hero-modal-window {
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
   /* ?========================= BASIC PRINCIPLES SECTION ===================== */
   .principles-item {
     width: 356px;
@@ -1262,6 +1285,11 @@ body.modal-open {
   .footer-wrapper-btn{
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  /* -------------------- modal window and backdrop ----------------- */
+  .hero-modal-window {
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 /* !##################### < 1200px ########################### */
